@@ -5,7 +5,7 @@ if sys.argv[1] == 'refresh':
     apps = getSeewoApps()
     status = [0,0,0,0,0,0]
     file = open('apps.txt','w+',encoding='utf-8')
-    for i in range(5):
+    for i in range(6):
         if apps[i][0]:
             status[i] = 1
     file.write(str(status))
