@@ -16,11 +16,10 @@
                 enableRemoteModule: true
             },
             maximizable: false,
-            resizable: true,
+            resizable: false,
         });
         Menu.setApplicationMenu(null);
         win.loadFile('index.html');
-        win.webContents.openDevTools()
         win.setSkipTaskbar(true);
         win.on('closed', () => {
             win = null
