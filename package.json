@@ -1,0 +1,12 @@
+{
+  "name": "seewoutils",
+  "version": "1.0.0",
+  "description": "A Seewo App Launcher",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron .",
+    "package":"electron-packager . --electron-version=17.0.1"
+  },
+  "author": "alex",
+  "license": "ISC"
+}
