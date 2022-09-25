@@ -15,6 +15,7 @@ span{
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 5px;
     animation: 'in 0.6s 1';
+    display: none;
 }
 #top{
     height: 30px;
@@ -40,7 +41,7 @@ span{
     transition: 0.4s;
     transition-duration: 0.4s;
     width: 18%;
-    display: inline-block;
+    display: none;
     text-align: center;
     border-radius: 5px;
 }
@@ -60,9 +61,6 @@ hr{
     width: 70%;
     float: right;
 }
-#ppttoolt{
-    font-size: 10px;
-}
 #menub{
     margin-left: 20px;
     margin-right: 10px;
@@ -78,6 +76,7 @@ hr{
     transition-duration: 0.4s;
     float: right;
     margin-top: 5px;
+    display: none;
 }
 #ppttool:hover{
     background-color: gray;

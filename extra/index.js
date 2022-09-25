@@ -3,6 +3,8 @@ const { ipcRenderer } = require("electron");
 var isShowMenu = false;
 var isLock = false;
 //注册组件
+//主窗口
+var container = document.getElementById('container')
 //拖动
 var title = document.getElementById('title')
 //菜单
@@ -41,21 +43,12 @@ function change(a,b){
     b.style.animation = 'in 0.6s 1';
     b.style.display = 'block';
 }
-//显示菜单
-menubtn.onclick = function(){
-    if(isShowMenu){
-        isShowMenu = false;
-        change(menulist,ppttool);
-        checkApp(ppttool,'checkppt');
-    }else{
-        isShowMenu = true;
-        change(ppttool,menulist);
-    }
-}
 //检测程序
 function checkApp(app,message){
     if(sendMessage(message) == 1){
         app.style.display = 'none';
+    }else{
+        app.style.display = 'inline-block';
     }
 }
 //刷新程序列表
@@ -80,6 +73,19 @@ function getLock(){
 refreshApp();
 getLock();
 sendMessage('setpos');
+//加载完成后再显示窗口
+container.style.display = 'block';
+//显示菜单
+menubtn.onclick = function(){
+    if(isShowMenu){
+        isShowMenu = false;
+        change(menulist,ppttool);
+        checkApp(ppttool,'checkppt');
+    }else{
+        isShowMenu = true;
+        change(ppttool,menulist);
+    }
+}
 //启动程序
 swservice.onclick = function(){
     sendMessage('launchsws');
