@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "test": "electron .",
-    "package":"electron-packager . --electron-version=17.0.1"
+    "package":"electron-packager . --icon=assist/icon.ico --electron-version=17.0.1"
   },
   "author": "alex",
   "license": "ISC"

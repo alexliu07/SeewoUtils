@@ -14,7 +14,6 @@ span{
     width: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 5px;
-    animation: 'in 0.6s 1';
     display: none;
 }
 #top{
@@ -46,7 +45,7 @@ span{
     border-radius: 5px;
 }
 .apps:hover{
-    background-color: gray;
+    background-color: rgba(128, 128, 128,0.8);
 }
 .appimgs{
     width: 40px;
@@ -67,19 +66,19 @@ hr{
     float: right;
 }
 #ppttoolt{
+    transition: 0.4s;
+    transition-duration: 0.4s;
     border: 1px white solid;
     border-radius: 2px;
     font-size: 12px;
 }
+#ppttoolt:hover{
+    background-color: rgba(128, 128, 128,0.8);
+}
 #ppttool{
-    transition: 0.4s;
-    transition-duration: 0.4s;
     float: right;
     margin-top: 5px;
     display: none;
-}
-#ppttool:hover{
-    background-color: gray;
 }
 #title{
     margin-top: 10px;
@@ -92,7 +91,7 @@ hr{
     border-radius: 2px;
 }
 #menubtn:hover{
-    background-color: gray;
+    background-color: rgba(128, 128, 128,0.8);
 }
 #menu{
     margin-top: 5px;
@@ -113,7 +112,7 @@ hr{
     transition-duration: 0.4s;
 }
 .menutext:hover{
-    background-color: gray;
+    background-color: rgba(128, 128, 128,0.8);
 }
 .menufb{
     margin-top: 2px;

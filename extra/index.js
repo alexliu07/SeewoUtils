@@ -59,6 +59,8 @@ function refreshApp(){
     checkApp(easinote,'checken');
     checkApp(swlink,'checkswl');
     checkApp(easicamera,'checkecam');
+    isShowMenu = false;
+    change(menulist,ppttool);
     checkApp(ppttool,'checkppt');
 }
 refresh.onclick = refreshApp;
@@ -74,6 +76,7 @@ refreshApp();
 getLock();
 sendMessage('setpos');
 //加载完成后再显示窗口
+container.style.animation = 'in 0.6s 1';
 container.style.display = 'block';
 //显示菜单
 menubtn.onclick = function(){
