@@ -20,6 +20,7 @@
         });
         Menu.setApplicationMenu(null);
         win.loadFile('index.html');
+        //win.webContents.openDevTools()
         win.setSkipTaskbar(true);
         win.on('closed', () => {
             win = null
@@ -37,8 +38,15 @@
     const url = path.resolve(__dirname, 'utils/util.exe');
     //监听请求
     ipcMain.on("sync-message", (event, arg) => {
+        //检测更新
+        if(arg == 'update'){
+            var spawnObt = child_process.spawn(url, ['update'], {encoding: 'utf-8'});
+            spawnObt.stdout.on('data', function(chunk) {
+                event.returnValue = 0;
+            });
+        }
         //刷新缓存
-        if(arg == 'refresh'){
+        else if(arg == 'refresh'){
             var spawnObt = child_process.spawn(url, ['refresh'], {encoding: 'utf-8'});
             spawnObt.stdout.on('data', function(chunk) {
                 event.returnValue = 0;

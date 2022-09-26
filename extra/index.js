@@ -14,6 +14,7 @@ var menubtn = document.getElementById('menubtn');
 var exitbtn = document.getElementById('exit');
 var refresh = document.getElementById('refresh');
 var lockbtn = document.getElementById('locks');
+var updatebtn = document.getElementById('chkup');
 //App
 var swservice = document.getElementById('swservice');
 var easicare = document.getElementById('easicare');
@@ -64,6 +65,10 @@ function refreshApp(){
     checkApp(ppttool,'checkppt');
 }
 refresh.onclick = refreshApp;
+//检测更新
+updatebtn.onclick = function(){
+    sendMessage('update');
+}
 //获取锁定
 function getLock(){
     if(sendMessage('getlock') == 'unlocked'){

@@ -79,3 +79,4 @@ elif sys.argv[1] == 'unlock':
 #检测更新
 elif sys.argv[1] == 'update':
     os.system('start updater\\updater.exe')
+    print(0,end='')
